@@ -100,9 +100,10 @@ img {
   margin-bottom: 0;
 }
 
-.navbar .navbar-toggler span {
+.navbar .navbar-toggler span i {
   color: #000;
   border: 1px solid transparent;
+  font-size: 1.5rem;
 }
 
 .navbar-nav .nav-item a {
@@ -420,6 +421,9 @@ i {
   color: white;
   background-color: rgba(255, 255, 255, 0.2);
   margin: 1rem 1rem;
+  position: relative;
+  letter-spacing: 1px;
+  padding: 1rem 1.5rem;
 }
 
 .feedback__info {
@@ -458,6 +462,19 @@ i {
   background-color: rgba(176, 96, 16, 0.8);
 }
 
+.feedback__item p::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 27%;
+  width: 0;
+  height: 0;
+  border-top: 9px solid rgba(227, 227, 227, 0.23);
+  border-right: 9px solid transparent;
+  border-left: 9px solid transparent;
+  transform: rotate(0deg);
+}
+
 /* STATS */
 
 .stats {
@@ -473,18 +490,28 @@ i {
 
 .stats__list {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
   color: white;
   background-color: #212121;
   padding: 2rem 3rem;
 }
 
-.stats__list > i {
+.stats__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.stats__list .stats__content > i {
   color: #b06010;
   font-size: 3rem;
-  margin: 2rem 0;
-  margin-right: -5rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.stats__detail {
+  width: 10rem;
 }
 
 .stats__detail > p,
@@ -493,6 +520,7 @@ i {
   text-align: left;
   margin: 0;
   padding: 0;
+  margin-left: 1rem;
 }
 
 /* FOOTER */
@@ -609,6 +637,12 @@ i {
   color: #fff;
   width: 20%;
   border: none;
+  transition: all 0.5s ease;
+}
+
+.footer__form form button:hover {
+  background-color: #b06010;
+  color: #fff;
 }
 
 .footer__copyright {
@@ -635,4 +669,167 @@ i {
 
 .footer__copyright p a:hover {
   color: white;
+}
+
+/* RESPONSIVE */
+
+/* @media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 992px) {
+  .carousel-caption p {
+    font-size: 2.3rem;
+    width: 40rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__top a i,
+  .header__top a span {
+    font-size: 1rem !important;
+  }
+
+  .carousel-caption p {
+    font-size: 2rem;
+    width: 30rem;
+  }
+} */
+
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+  h2 {
+    font-size: 1.4rem !important;
+  }
+  p {
+    font-size: 1rem !important;
+  }
+
+  .header__top a i,
+  .header__top a span {
+    font-size: 0.8rem !important;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header__top a i {
+    margin-right: 0.5rem;
+  }
+
+  .navbar-brand {
+    transform: scale(0.8);
+    margin: 0;
+    margin-left: -1rem;
+  }
+
+  .navbar {
+    padding: 0;
+  }
+
+  /* CAROUSEL */
+
+  .carousel-item {
+    height: 30rem;
+  }
+
+  .carousel-caption p:first-child {
+    font-size: 1.8rem !important;
+    width: 18rem;
+    margin-top: -2rem;
+  }
+
+  /* ABOUT */
+
+  .about__list {
+    flex-direction: column;
+  }
+
+  .about__item {
+    width: 100%;
+  }
+
+  /* BANNER */
+
+  .banner {
+    flex-direction: column;
+  }
+
+  .banner__left,
+  .banner__right {
+    width: 100%;
+  }
+
+  .banner__left {
+    height: 15rem;
+  }
+
+  .banner__right h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+
+  /* TEAM */
+
+  .team {
+    padding-bottom: 2rem;
+  }
+  .team__list {
+    flex-direction: column;
+  }
+  .team__item {
+    width: 100%;
+    padding: 1.5rem 2rem;
+  }
+
+  /* FEEDBACK */
+
+  .feedback .container > h1 {
+    margin-top: 0;
+  }
+
+  .feedback__info {
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .feedback__info img {
+    height: 4rem !important;
+    width: auto;
+  }
+
+  /* STATS */
+
+  .stats__list {
+    flex-direction: column;
+  }
+
+  .stats__content {
+    margin: 1rem 0;
+  }
+
+  .stats__detail h2,
+  .stats__detail p {
+    margin: 0;
+  }
+
+  /* FOOTER */
+  .footer__contact,
+  .footer__form {
+    padding: 1rem;
+  }
+
+  .contact__list h2 {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+  }
+
+  .contact__list p i,
+  .contact__list p span,
+  .contact__list a i,
+  .contact__list a span,
+  .contact__list p {
+    font-size: 0.875rem;
+  }
 }

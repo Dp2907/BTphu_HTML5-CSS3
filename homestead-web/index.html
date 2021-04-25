@@ -106,17 +106,17 @@
                   <a class="nav-link" href="#">CONTACT</a>
                 </li>
               </ul>
-            </div>
-            <div class="header__social__icon">
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-dribbble"></i>
-              </a>
+              <div class="header__social__icon">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-dribbble"></i>
+                </a>
+              </div>
             </div>
           </nav>
         </div>
@@ -393,7 +393,7 @@
             <div class="feedback__info">
               <img src="./images/f2.jpg" alt="" />
               <div>
-                <h1>Peter Parker</h1>
+                <h1>Mary Jane</h1>
                 <p>Vestibulum</p>
               </div>
             </div>
@@ -406,7 +406,7 @@
             <div class="feedback__info">
               <img src="./images/f3.jpg" alt="" />
               <div>
-                <h1>Peter Parker</h1>
+                <h1>Steven Wilson</h1>
                 <p>Vestibulum</p>
               </div>
             </div>
@@ -433,20 +433,26 @@
         <h1>Overview</h1>
         <p>Etiam sodales orci sit amet vehicula pellentesque</p>
         <div class="stats__list">
-          <i class="fa fa-user"></i>
-          <div class="stats__detail">
-            <h2>16500</h2>
-            <p>Happy Clients</p>
+          <div class="stats__content">
+            <i class="fa fa-user"></i>
+            <div class="stats__detail">
+              <h2>16500</h2>
+              <p>Happy Clients</p>
+            </div>
           </div>
-          <i class="fa fa-briefcase"></i>
-          <div class="stats__detail">
-            <h2>210</h2>
-            <p>Sales per month</p>
+          <div class="stats__content">
+            <i class="fa fa-briefcase"></i>
+            <div class="stats__detail">
+              <h2>210</h2>
+              <p>Sales per month</p>
+            </div>
           </div>
-          <i class="fa fa-home"></i>
-          <div class="stats__detail">
-            <h2>20500</h2>
-            <p>Number of Homes</p>
+          <div class="stats__content">
+            <i class="fa fa-home"></i>
+            <div class="stats__detail">
+              <h2>20500</h2>
+              <p>Number of Homes</p>
+            </div>
           </div>
         </div>
       </div>
@@ -551,20 +557,36 @@
         $(".owl-carousel").owlCarousel();
       });
       var owl = $(".owl-carousel");
-      owl.owlCarousel({
-        items: 3,
-        loop: true,
-        margin: 10,
-        autoplay: true,
-        autoplayTimeout: 1000,
-        autoplayHoverPause: true,
-      });
-      $(".play").on("click", function () {
-        owl.trigger("play.owl.autoplay", [1000]);
-      });
-      $(".stop").on("click", function () {
-        owl.trigger("stop.owl.autoplay");
-      });
+      function resizeItem(x) {
+        if (x.matches) {
+          owl.owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 1500,
+            autoplayHoverPause: true,
+          });
+        } else {
+          owl.owlCarousel({
+            items: 3,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 1500,
+            autoplayHoverPause: true,
+          });
+        }
+        $(".play").on("click", function () {
+          owl.trigger("play.owl.autoplay", [1000]);
+        });
+        $(".stop").on("click", function () {
+          owl.trigger("stop.owl.autoplay");
+        });
+      }
+      var x = window.matchMedia("(max-width: 576px)");
+      resizeItem(x);
+      x.addListener(resizeItem);
     </script>
   </body>
 </html>
