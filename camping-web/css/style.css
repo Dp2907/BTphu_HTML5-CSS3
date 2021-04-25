@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a,
+button {
+  transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+h1,
+h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  font-weight: 900;
+  margin-top: 3rem;
+  text-align: center;
+  color: #212529;
+}
+h2 {
+  font-size: 2rem;
+}
+
+p,
+a {
+  color: #666;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+  position: absolute;
+  width: 100%;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand span {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.navbar-nav .nav-item a {
+  color: #fff;
+}
+
+.navbar-nav .nav-item a:hover,
+.navbar-nav .nav-item a:active {
+  color: #ef9632;
+}
+
+.dropdown-menu {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-toggler {
+  color: #fff;
+  background-color: #212529;
+}
+
+.navbar-nav .nav-item a {
+  text-align: center;
+}
+
+.dropdown-menu a {
+  color: #000 !important;
+  padding: 0.3rem;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+  color: #ef9632 !important;
+}
+
+@media screen and (max-width: 992px) {
+  .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .dropdown-menu a {
+    color: #fff !important;
+  }
+
+  .dropdown-item:hover {
+    color: #ef9632 !important;
+    background-color: #fff;
+  }
+
+  .navbar-nav .nav-item > a {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+/* CAROUSEL */
+
+.slider {
+  background: url(../images/banner.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  height: 50rem;
+}
