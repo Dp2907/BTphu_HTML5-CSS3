@@ -6,6 +6,9 @@
   font-size: 1rem;
   font-weight: 400;
 }
+div {
+  width: 100% !important;
+}
 
 html {
   scroll-behavior: smooth;
@@ -28,7 +31,7 @@ button {
 h1,
 h2 {
   font-family: "Lato", sans-serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   letter-spacing: 2px;
   font-weight: 900;
   margin-top: 3rem;
@@ -66,11 +69,12 @@ img {
 
 .navbar-brand span {
   color: #fff;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .navbar-nav .nav-item a {
   color: #fff;
+  font-size: 1.2rem;
 }
 
 .navbar-nav .nav-item a:hover,
@@ -130,4 +134,155 @@ img {
   -moz-background-size: cover;
   -webkit-background-size: cover;
   height: 50rem;
+  padding: 1rem;
 }
+
+.slider__content {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  text-align: left;
+  width: 50rem;
+}
+
+.slider__content div h1,
+.slider__content div p:nth-child(3),
+.slider__content div a {
+  color: white;
+  text-align: left;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.slider__content div p:first-child {
+  color: #ef9632;
+  font-weight: 400;
+}
+
+.slider__content div p:nth-child(3),
+.slider__content div a {
+  font-size: 1rem;
+}
+
+.slider__content div a {
+  display: inline-block;
+  background-color: #ef9632;
+  padding: 0.6875rem 1.875rem;
+  margin-top: 2rem;
+  border-radius: 0.3rem;
+}
+
+.slider__content div a:hover {
+  background-color: #ff3838;
+}
+
+/* EXPLORE */
+.explore i {
+  color: #ef9632;
+  font-size: 2rem;
+}
+
+.explore {
+  padding: 0 3rem;
+}
+
+.explore h2 {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.explore .container > h1 {
+  margin-bottom: 1rem;
+}
+
+.explore__top h2,
+.explore__top {
+  text-align: center;
+}
+
+.explore__top > div {
+  padding: 0 2rem;
+  margin: 2rem 0;
+}
+
+.explore__bottom > div {
+  padding: 2rem;
+}
+
+/* STATS */
+.stats {
+  background-color: #103285;
+  padding: 3rem;
+}
+
+.stats i {
+  color: #ef9632;
+  font-size: 3rem;
+}
+
+.stats h2,
+.stats p {
+  color: white;
+  margin: 1rem 0;
+  font-size: 3rem;
+}
+
+.stats p {
+  font-size: 1rem;
+}
+
+.stats .row > div {
+  margin: 1rem 0;
+}
+
+/* agents */
+
+.agents > div > div {
+  margin: 2rem 0;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.agents__item {
+  padding: 2rem;
+}
+
+.agents__item img {
+  box-shadow: 0 0 20px;
+  transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transform: scale(1);
+}
+
+.agents__item p:nth-child(2) {
+  color: #ef9632;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.agents__item h2 {
+  margin: 1rem 0;
+}
+
+.agents__item i {
+  margin: 0.5rem 1rem;
+  color: #3b5998;
+}
+
+.agents__item p i:nth-child(2) {
+  color: #1da1f2;
+}
+
+.agents__item p i:nth-child(3) {
+  color: #f44336;
+}
+
+.agents__item:nth-child(2) p i:nth-child(3) {
+  color: #ea4c89;
+}
+
+
